@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/view_color"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/open_sans_font"
+                android:id="@+id/settings_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:layout_margin="16sp"
+                tools:targetApi="p" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="113dp"
+                android:layout_height="113dp"
+                android:src="@drawable/profile_photo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                style="@style/open_sans_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diamond_sword"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                tools:targetApi="p" />
+
+            <TextView
+                style="@style/open_sans_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Career"
+                android:textSize="14sp"
+                android:textColor="@color/gray_text"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                tools:targetApi="p" />
+
+            <TextView
+                style="@style/open_sans_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home address"
+                android:textSize="14sp"
+                android:textColor="@color/gray_text"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                tools:targetApi="p" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/icons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="62dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/facebook_icon"
+                    android:clickable="true"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/linked_in_icon"
+                    android:layout_marginHorizontal="32dp"
+                    android:clickable="true"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/instagram_icon"
+                    android:clickable="true"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/open_sans_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go to settings and fill out the profile"
+                android:gravity="center_horizontal"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="61dp"/>
+
+            <Button
+                style="@style/edit_profile_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:strokeColor = "@color/view_color"
+                app:strokeWidth = "2dp"/>
+
+            <Button
+                style="@style/open_sans_font"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="View my contacts"
+                android:textSize="16sp"
+                app:cornerRadius="6dp"
+                android:backgroundTint="@color/orange"/>
+
+        </LinearLayout>
+
+</LinearLayout>
