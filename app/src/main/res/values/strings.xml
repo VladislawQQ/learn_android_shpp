@@ -2,4 +2,8 @@
     <string name="app_name">MyProfile</string>
     <string name="settings">Settings</string>
     <string name="diamond_sword">Diamond Sword</string>
+    <string name="career">Career</string>
+    <string name="home_address">Home address</string>
+    <string name="go_to_settings_and_fill_out_the_profile">Go to settings and fill out the profile</string>
+    <string name="view_my_contacts">View my contacts</string>
 </resources>

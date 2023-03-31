@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="settings_top_margin">16dp</dimen>
+    <dimen name="settings_text_size">24sp</dimen>
+
+    <dimen name="profile_name_top_margin">24dp</dimen>
+    <dimen name="profile_name_text_size">18sp</dimen>
+
+    <dimen name="profile_avatar_top_margin">24dp</dimen>
+
+    <dimen name="career_text_size">14sp</dimen>
+    <dimen name="career_margin_top">8dp</dimen>
+
+    <dimen name="address_text_size">14sp</dimen>
+    <dimen name="address_margin_top">16dp</dimen>
+
+    <dimen name="icons_ll_margin_top">62dp</dimen>
+    <dimen name="center_icon_margin_horizontal">32dp</dimen>
+
+    <dimen name="fill_out_profile_text_size">14sp</dimen>
+    <dimen name="fill_out_profile_margin_top">62dp</dimen>
+
+    <dimen name="edit_profile_text_size">14sp</dimen>
+    <dimen name="edit_profile_margin_top">16dp</dimen>
+    <dimen name="edit_profile_margin_horizontal">16dp</dimen>
+    <dimen name="edit_profile_stroke_width">2dp</dimen>
+
+    <dimen name="view_contacts_margin_horizontal">16dp</dimen>
+    <dimen name="view_contacts_margin_top">16dp</dimen>
+    <dimen name="view_contacts_margin_bottom">16dp</dimen>
+    <dimen name="view_contacts_text_size">16sp</dimen>
+    <dimen name="view_contacts_corner_radius">6dp</dimen>
+
+
+
+</resources>
