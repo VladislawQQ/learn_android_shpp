@@ -7,6 +7,7 @@
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/drawable/button_border.xml" value="0.149" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/drawable/button_border_btn.xml" value="0.149" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/drawable/facebook_icon_vector.xml" value="0.124" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/drawable/google_btn_icon.xml" value="0.149" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/drawable/gradient_background.xml" value="0.149" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/drawable/ic_baseline_android_24.xml" value="0.149" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/drawable/ic_group_15.xml" value="0.124" />
@@ -19,7 +20,10 @@
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/font/fonts.xml" value="0.2759259259259259" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/font/open_sans.xml" value="0.23037974683544304" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/layout-v28/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/layout/activity_auth.xml" value="0.264" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/layout/auth_activity.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

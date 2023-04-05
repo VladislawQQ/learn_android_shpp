@@ -11,4 +11,7 @@
     <color name="light_gray">#D3D3D3</color>
     <color name="orange">#FB5E06</color>
     <color name="gray_text">#B2B2B3</color>
+    <color name="gray_edit_text">#BDBDBD</color>
+    <color name="white_edit_text">#FAFAFA</color>
+    <color name="error_msg_color">#F93E3E</color>
 </resources>

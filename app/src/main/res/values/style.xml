@@ -26,4 +26,22 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="TextColor" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/gray_edit_text</item>
+        <item name="colorControlActivated">@color/gray_edit_text</item>
+    </style>
+
+    <style name="edit_text_auth_activity">
+        <item name="android:hint">@string/email</item>
+        <item name="android:theme">@style/TextColor</item>
+        <item name="barrierDirection">bottom</item>
+        <item name="hintAnimationEnabled">@string/email</item>
+        <item name="hintEnabled">true</item>
+        <item name="hintTextColor">#BDBDBD</item>
+        <item name="expandedHintEnabled">true</item>
+        <item name="android:textColorHint">#BDBDBD</item>
+        <item name="android:layout_marginHorizontal">16dp</item>
+        <item name="boxBackgroundMode">none</item>
+    </style>
+
 </resources>

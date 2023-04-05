@@ -6,4 +6,9 @@
     <string name="home_address">Home address</string>
     <string name="go_to_settings_and_fill_out_the_profile">Go to settings and fill out the profile</string>
     <string name="view_my_contacts">View my contacts</string>
+    <string name="let_s_get_acquainted">Let\'s get acquainted</string>
+    <string name="fill_out_the_profile_and_go_to_the_application">Fill out the profile and go to the application!</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="google">Google</string>
 </resources>

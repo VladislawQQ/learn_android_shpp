@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <dimen name="settings_top_margin">16dp</dimen>
     <dimen name="settings_text_size">24sp</dimen>
 
@@ -31,7 +31,6 @@
     <dimen name="view_contacts_margin_bottom">16dp</dimen>
     <dimen name="view_contacts_text_size">16sp</dimen>
     <dimen name="view_contacts_corner_radius">6dp</dimen>
-
 
 
 </resources>
