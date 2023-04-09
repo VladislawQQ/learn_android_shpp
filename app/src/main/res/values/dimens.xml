@@ -26,9 +26,8 @@
     <dimen name="edit_profile_margin_horizontal">16dp</dimen>
     <dimen name="edit_profile_stroke_width">2dp</dimen>
 
-    <dimen name="view_contacts_margin_horizontal">16dp</dimen>
-    <dimen name="view_contacts_margin_top">16dp</dimen>
-    <dimen name="view_contacts_margin_bottom">16dp</dimen>
+    <dimen name="view_contacts_margin">16dp</dimen>
+    <dimen name="view_contacts_padding">16dp</dimen>
     <dimen name="view_contacts_text_size">16sp</dimen>
     <dimen name="view_contacts_corner_radius">6dp</dimen>
 
