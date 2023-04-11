@@ -13,15 +13,14 @@ import androidx.core.widget.doAfterTextChanged
 import com.example.myprofile.databinding.ActivityAuthBinding
 import com.google.android.material.snackbar.Snackbar
 
-@SuppressLint("StaticFieldLeak")
-private lateinit var binding: ActivityAuthBinding
-private lateinit var sharedPreferences: SharedPreferences
-
 private const val KEY_EMAIL = "email"
 private const val KEY_PASSWORD = "password"
 private const val KEY_REMEMBERME = "rememberMe"
 
 class AuthActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityAuthBinding
+    private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthBinding.inflate(layoutInflater)
@@ -33,13 +32,8 @@ class AuthActivity : AppCompatActivity() {
         // Check if "remember me" is true
         // then autologin to profile and start "my profile" intent
         if (sharedPreferences.getBoolean("rememberMe", false)) {
-            binding.emailEditText.setText(sharedPreferences.getString("email", ""))
-            binding.passwordEditText.setText(sharedPreferences.getString("password", ""))
 
             intent = Intent(this, ProfileActivity::class.java)
-
-            intent.putExtra("usersEmail", binding.emailEditText.text.toString())
-
             startActivity(intent)
         }
 
