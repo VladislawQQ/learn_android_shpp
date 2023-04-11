@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/view_color"
+        app:layout_constraintBottom_toTopOf="@id/bottom_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.5" />
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_view"
+        app:layout_constraintVertical_weight="0.5" />
+
+    <TextView
+        android:id="@+id/textview_settings"
+        style="@style/open_sans_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/settings_top_margin"
+        android:text="@string/settings"
+        android:textColor="@color/white"
+        android:textSize="@dimen/settings_text_size"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageview_profile_photo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/profile_photo"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textview_profile_name"
+        style="@style/open_sans_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="@string/diamond_sword"
+        android:textColor="@color/white"
+        android:textSize="@dimen/profile_name_text_size"
+
+        app:layout_constraintTop_toBottomOf="@id/imageview_profile_photo"
+        app:layout_constraintBottom_toBottomOf="@id/top_view"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_career"
+        style="@style/open_sans_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="@string/career"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/career_text_size"
+
+        app:layout_constraintTop_toBottomOf="@id/textview_profile_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textview_address"
+        style="@style/open_sans_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="@string/home_address"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/address_text_size"
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_career" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape"
+        app:srcCompat="@drawable/facebook_icon_vector"
+        android:layout_marginHorizontal="32dp"
+
+        app:layout_constraintTop_toTopOf="@id/imageview_linked_in"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_linked_in"
+        app:layout_constraintEnd_toStartOf="@id/imageview_linked_in"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageview_linked_in"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="@dimen/center_icon_margin_horizontal"
+        android:clickable="true"
+        app:srcCompat="@drawable/linked_in_icon_vector"
+        app:layout_constraintTop_toBottomOf="@id/top_view"
+        app:layout_constraintBottom_toTopOf="@id/textview_fill_out_profile"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/instagram_icon_vector"
+        android:layout_marginHorizontal="32dp"
+
+        app:layout_constraintTop_toTopOf="@id/imageview_linked_in"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_linked_in"
+        app:layout_constraintStart_toEndOf="@id/imageview_linked_in"/>
+
+    <TextView
+        android:id="@+id/textview_fill_out_profile"
+        style="@style/open_sans_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fill_out_profile_margin_bottom"
+        android:gravity="center_horizontal"
+        android:text="@string/go_to_settings_and_fill_out_the_profile"
+        android:textColor="@color/black"
+        android:textSize="@dimen/fill_out_profile_text_size"
+
+        app:layout_constraintBottom_toTopOf="@id/button_edit_profile"/>
+
+    <Button
+        android:id="@+id/button_edit_profile"
+        style="@style/edit_profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:strokeColor="@color/view_color"
+        app:strokeWidth="@dimen/edit_profile_stroke_width"
+        android:padding="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_view_contacts"
+        app:layout_constraintHorizontal_bias="0.9"/>
+
+    <Button
+        android:id="@+id/button_view_contacts"
+        style="@style/open_sans_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/view_contacts_margin"
+        android:backgroundTint="@color/orange"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingVertical="8dp"
+        android:text="@string/view_my_contacts"
+        android:textColor="@color/white"
+        android:textSize="@dimen/view_contacts_text_size"
+        app:cornerRadius="@dimen/view_contacts_corner_radius"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
