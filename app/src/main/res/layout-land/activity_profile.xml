@@ -100,19 +100,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_career" />
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:background="@drawable/shape"
         app:srcCompat="@drawable/facebook_icon_vector"
         android:layout_marginHorizontal="32dp"
 
         app:layout_constraintTop_toTopOf="@id/imageview_linked_in"
         app:layout_constraintBottom_toBottomOf="@id/imageview_linked_in"
-        app:layout_constraintEnd_toStartOf="@id/imageview_linked_in"/>
+        app:layout_constraintEnd_toStartOf="@id/imageview_linked_in"
+        android:contentDescription="@string/facebook_icon" />
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <ImageView
         android:id="@+id/imageview_linked_in"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -123,9 +123,10 @@
         app:layout_constraintBottom_toTopOf="@id/textview_fill_out_profile"
         app:layout_constraintVertical_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/linkedin_icon" />
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:clickable="true"
@@ -134,7 +135,8 @@
 
         app:layout_constraintTop_toTopOf="@id/imageview_linked_in"
         app:layout_constraintBottom_toBottomOf="@id/imageview_linked_in"
-        app:layout_constraintStart_toEndOf="@id/imageview_linked_in"/>
+        app:layout_constraintStart_toEndOf="@id/imageview_linked_in"
+        android:contentDescription="@string/instagram_icon" />
 
     <TextView
         android:id="@+id/textview_fill_out_profile"

@@ -3,7 +3,7 @@
     <style name="Theme.MyProfile" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/view_color</item>
-        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
         <item name="colorOnPrimary">@color/light_gray</item>
 
         <item name="colorOnSurface">@color/white</item> // Normal State

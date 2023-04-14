@@ -14,4 +14,9 @@
     <color name="gray_edit_text">#BDBDBD</color>
     <color name="white_edit_text">#FAFAFA</color>
     <color name="error_msg_color">#F93E3E</color>
+    <color name="view_color_night">#000021</color>
+    <color name="orange_night">#AC4423</color>
+    <color name="google_btn_night">#00332E</color>
+    <color name="text_color_night">#1774A8</color>
+    <color name="auth_sign_in_color">#35A4A8</color>
 </resources>

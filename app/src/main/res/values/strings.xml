@@ -18,4 +18,7 @@
     <string name="by_clicking_register_you_agree_to_our_terms_nand_conditions">By clicking Register you agree to our Terms\nand Conditions</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in">Sign in</string>
+    <string name="facebook_icon">facebook_icon</string>
+    <string name="linkedin_icon">linkedin_icon</string>
+    <string name="instagram_icon">instagram_icon</string>
 </resources>
