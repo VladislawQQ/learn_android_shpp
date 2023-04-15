@@ -6,7 +6,7 @@
         <item name="colorPrimaryVariant">@color/orange</item>
         <item name="colorOnPrimary">@color/light_gray</item>
 
-        <item name="colorOnSurface">@color/white</item> // Normal State
+        <item name="colorOnSurface">@color/main_text_color</item> // Normal State
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/orange</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>

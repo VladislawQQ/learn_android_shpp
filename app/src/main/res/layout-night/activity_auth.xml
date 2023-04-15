@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/view_color">
+    android:background="@color/view_color_night">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_start"
@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="@id/content_start"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_bias="0.15"
         />
 
     <TextView
@@ -62,7 +62,7 @@
         style="@style/open_sans_font"
         android:gravity="center"
         android:text="@string/let_s_get_acquainted"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_title_text_size"
         />
 
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/fill_out_the_profile_and_go_to_the_application"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_text_size_medium"
         tools:ignore="MissingConstraints" />
 
@@ -136,11 +136,11 @@
 
     <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/remember_me_checkbox"
-        style="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        android:buttonTint="@color/main_text_color"
+        android:buttonTint="@color/main_text_color_night"
+        style="@style/open_sans_font"
         android:text="@string/remember_me"
         android:textColor="@color/gray_edit_text"
         android:textSize="@dimen/auth_text_size_big"
@@ -175,12 +175,12 @@
         app:iconGravity="textStart"
         app:iconTintMode="multiply"
 
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/google_btn_night"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:padding="@dimen/padding_small"
         android:text="@string/google"
-        android:textColor="@color/google_btn_text"
+        android:textColor="@color/white"
         android:textSize="@dimen/auth_button_text_size" />
 
     <TextView
@@ -190,7 +190,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/or"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_text_size_largest"
         tools:ignore="MissingConstraints" />
 
@@ -204,14 +204,15 @@
         android:gravity="center"
         android:text="@string/register"
         android:textAllCaps="true"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_button_text_size"
 
         app:cornerRadius="@dimen/profile_view_contacts_corner_radius"
         android:insetTop="0dp"
         android:insetBottom="0dp"
 
-        app:strokeColor="@color/orange"
+        android:backgroundTint="@android:color/transparent"
+        app:strokeColor="@color/orange_night"
         app:strokeWidth="@dimen/auth_register_button_stroke_width"
         tools:ignore="MissingConstraints" />
 
@@ -224,7 +225,7 @@
         style="@style/open_sans_font"
         android:gravity="center"
         android:text="@string/terms_text_portrait"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textFontWeight="400"
         android:textSize="@dimen/auth_text_size_medium"
 
@@ -253,9 +254,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/already_have_an_account"
-        android:textColor="@color/gray_edit_text"
+        android:textColor="@color/gray_text_night"
         android:textSize="@dimen/auth_text_size_big"
-
         />
 
     <TextView
@@ -265,7 +265,7 @@
 
         style="@style/open_sans_font"
         android:text="@string/sign_in"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_text_size_big"
         tools:ignore="MissingConstraints" />
 

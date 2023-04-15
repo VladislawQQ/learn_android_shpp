@@ -1,11 +1,21 @@
 <resources>
     <string name="app_name">MyProfile</string>
+
+    <!-- activity_profile strings -->
+
     <string name="settings">Settings</string>
-    <string name="diamond_sword">Diamond Sword</string>
+    <string name="name_surname">Name Surname</string>
     <string name="career">Career</string>
     <string name="home_address">Home address</string>
     <string name="go_to_settings_and_fill_out_the_profile">Go to settings and fill out the profile</string>
+    <string name="edit_profile">Edit profile</string>
     <string name="view_my_contacts">View my contacts</string>
+    <string name="facebook_icon">facebook_icon</string>
+    <string name="linkedin_icon">linkedin_icon</string>
+    <string name="instagram_icon">instagram_icon</string>
+
+    <!-- activity_auth strings -->
+
     <string name="let_s_get_acquainted">Let\'s get acquainted</string>
     <string name="fill_out_the_profile_and_go_to_the_application">Fill out the profile and go to the application!</string>
     <string name="password">Password</string>
@@ -14,11 +24,19 @@
     <string name="remember_me">Remember me</string>
     <string name="register">Register</string>
     <string name="or">or</string>
-    <string name="by_clicking_register_you_agree_to_our_terms_and_conditions">By clicking Register you agree to our Terms and Conditions</string>
-    <string name="by_clicking_register_you_agree_to_our_terms_nand_conditions">By clicking Register you agree to our Terms\nand Conditions</string>
+    <string name="terms_text_land">By clicking Register you agree to our Terms and Conditions</string>
+    <string name="terms_text_portrait">By clicking Register you agree to our Terms\nand Conditions</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in">Sign in</string>
-    <string name="facebook_icon">facebook_icon</string>
-    <string name="linkedin_icon">linkedin_icon</string>
-    <string name="instagram_icon">instagram_icon</string>
+
+    <!-- Validation email and password -->
+    <string name="dont_use_spaces">Don\'t use spaces</string>
+    <string name="min_8_chars_pass">Minimum 8 character password</string>
+    <string name="contain_upper_case_chars">Must contain upper-case characters</string>
+    <string name="contain_number_chars">Must contain number characters</string>
+    <string name="invalid_email_address">Invalid Email Address</string>
+
+    <!-- Snackbar message -->
+    <string name="not_all_fields_are_field">Not all fields are filled</string>
+
 </resources>

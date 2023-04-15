@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--    chains, flow-->
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,198 +6,266 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/view_color">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="@dimen/auth_guideline_vertical_margin"
+        android:orientation="vertical"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_end="@dimen/auth_guideline_vertical_margin"
+        android:orientation="vertical"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="@dimen/auth_guideline_horizontal_margin_landscape"
+        android:orientation="horizontal"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_end="@dimen/auth_guideline_horizontal_margin_landscape"
+        android:orientation="horizontal"
+        />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_title_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textview_label_1, textview_label_2"
+        android:orientation="vertical"
+        app:flow_verticalStyle="packed"
+        app:flow_verticalGap="@dimen/margin_small"
+
+        app:layout_constraintTop_toTopOf="@id/content_top"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        />
+
     <TextView
         android:id="@+id/textview_label_1"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/open_sans_font"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@id/google_button"
-        app:layout_constraintVertical_bias="0"
         android:gravity="center"
         android:text="@string/let_s_get_acquainted"
-        android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/auth_title_text_size_landscape"
+        />
 
     <TextView
         android:id="@+id/textview_label_2"
         style="@style/open_sans_font"
-        app:layout_constraintTop_toBottomOf="@id/textview_label_1"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/fill_out_the_profile_and_go_to_the_application"
-        android:textColor="@color/white"
-        android:textSize="12sp" />
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/auth_text_size_medium"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_data_containers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="email_container, password_container, remember_me_checkbox"
+        android:orientation="vertical"
+        app:flow_verticalStyle="packed"
+
+        app:layout_constraintTop_toBottomOf="@id/flow_title_text"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_container"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/edit_text_auth_activity"
-        app:layout_constraintTop_toBottomOf="@id/textview_label_2"
         app:errorEnabled="true"
-        android:layout_marginTop="8dp"
-        app:helperTextTextColor="@color/error_msg_color">
+        app:helperTextTextColor="@color/color_error_msg">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/auth_text_size_big"
             android:lines="1"
-            android:textColor="@color/white_edit_text" />
+            android:textColor="@color/color_edit_text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_container"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/edit_text_auth_activity"
-        app:layout_constraintTop_toBottomOf="@id/email_container"
-
         app:counterEnabled="true"
         app:counterMaxLength="16"
         app:errorEnabled="true"
-        app:helperTextTextColor="@color/error_msg_color"
 
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/gray_edit_text"
 
-        android:hint="@string/password">
+        android:hint="@string/password"
+        tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/auth_text_size_big"
             android:inputType="textPassword"
             android:lines="1"
             android:maxLength="16"
-            android:textColor="@color/white_edit_text" />
+            android:textColor="@color/color_edit_text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/remember_me_checkbox"
-        style="@style/open_sans_font"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:buttonTint="@color/white"
+        style="@style/open_sans_font"
+
+        android:buttonTint="@color/main_text_color"
         android:text="@string/remember_me"
         android:textColor="@color/gray_edit_text"
-        android:textSize="10sp"
-        app:layout_constraintTop_toBottomOf="@id/password_container"
-        app:layout_constraintBottom_toTopOf="@id/google_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintVertical_bias="0"/>
+        android:textSize="@dimen/auth_text_size_big"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="button_google, textview_or, button_register"
+        android:orientation="horizontal"
+        app:flow_horizontalStyle="packed"
+        app:flow_horizontalGap="@dimen/margin_medium"
+
+        android:layout_marginHorizontal="@dimen/auth_buttons_margin_horizontal"
+        android:layout_marginBottom="@dimen/margin_small"
+
+        app:layout_constraintTop_toBottomOf="@+id/flow_data_containers"
+        app:layout_constraintBottom_toTopOf="@id/textview_terms"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        />
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/google_button"
+        android:id="@+id/button_google"
         style="@style/open_sans_font"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:paddingHorizontal="24dp"
-        android:text="@string/google"
-        android:textColor="#18181F"
-        android:textSize="12sp"
-        app:cornerRadius="6dp"
+
+        app:cornerRadius="@dimen/auth_google_button_radius"
         app:icon="@drawable/google_btn_icon"
         app:iconGravity="textStart"
         app:iconTintMode="multiply"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
 
-        app:layout_constraintEnd_toStartOf="@id/or_text_view"
-        app:layout_constraintTop_toBottomOf="@id/password_container" />
+        android:backgroundTint="@color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/google"
+        android:textColor="@color/google_btn_text"
+        android:textSize="@dimen/auth_button_text_size_landscape" />
 
     <TextView
-        android:id="@+id/or_text_view"
+        android:id="@+id/textview_or"
         style="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        app:layout_constraintTop_toTopOf="@id/google_button"
-        app:layout_constraintBottom_toBottomOf="@id/google_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
         android:gravity="center"
-        android:layout_marginBottom="8dp"
         android:text="@string/or"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/auth_text_size_largest"
+        tools:ignore="MissingConstraints" />
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/register_button"
-        style="@style/open_sans_font"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_register"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="36dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
+
+        style="@style/open_sans_font"
+        android:gravity="center"
         android:text="@string/register"
         android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:cornerRadius="6dp"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/auth_button_text_size_landscape"
 
-        android:layout_marginHorizontal="16dp"
-
-        app:layout_constraintTop_toTopOf="@id/google_button"
-        app:layout_constraintBottom_toBottomOf="@id/google_button"
-        app:layout_constraintStart_toEndOf="@id/or_text_view"
+        app:cornerRadius="@dimen/profile_view_contacts_corner_radius"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
 
         app:strokeColor="@color/orange"
-        app:strokeWidth="2dp"/>
+        app:strokeWidth="@dimen/auth_register_button_stroke_width"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/terms_text_view"
-        style="@style/open_sans_font"
-        android:layout_width="match_parent"
+        android:id="@+id/textview_terms"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="@dimen/margin_small"
+
+        style="@style/open_sans_font"
         android:gravity="center"
-        android:text="@string/by_clicking_register_you_agree_to_our_terms_and_conditions"
-        android:textColor="@color/white"
+        android:text="@string/terms_text_land"
+        android:textColor="@color/main_text_color"
         android:textFontWeight="400"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@id/have_acc_text_view"/>
+        android:textSize="@dimen/auth_text_size_small"
+
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintBottom_toTopOf="@id/flow_textview_sign_in"
+        />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_textview_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textview_have_acc, textview_sign_in"
+        android:orientation="horizontal"
+        app:flow_horizontalStyle="packed"
+        app:flow_horizontalGap="@dimen/auth_sign_in_texts_gap"
+
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintBottom_toBottomOf="@id/content_bottom"
+        />
 
     <TextView
-        android:id="@+id/have_acc_text_view"
+        android:id="@+id/textview_have_acc"
         style="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:text="@string/already_have_an_account"
         android:textColor="@color/gray_edit_text"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/terms_text_view"
-        app:layout_constraintStart_toStartOf="@id/terms_text_view"/>
+        android:textSize="@dimen/auth_text_size_medium"
+        />
 
     <TextView
-        android:id="@+id/sign_in_text_view"
-        style="@style/open_sans_font"
-        app:layout_constraintTop_toTopOf="@id/have_acc_text_view"
-        app:layout_constraintBottom_toBottomOf="@id/have_acc_text_view"
-        app:layout_constraintStart_toEndOf="@id/have_acc_text_view"
+        android:id="@+id/textview_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:clickable="true"
+
+        style="@style/open_sans_font"
         android:text="@string/sign_in"
-        android:textColor="@color/white"
-        android:textSize="14sp" />
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/auth_text_size_medium"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MyProfile</string>
+
+    <!-- activity_profile strings -->
+
+    <string name="settings">Налаштування</string>
+    <string name="name_surname">Ім\'я Прізвище</string>
+    <string name="career">Кар\'єра</string>
+    <string name="home_address">Домашня адреса</string>
+    <string name="go_to_settings_and_fill_out_the_profile">Зайдіть в налаштування і заповніть профіль</string>
+    <string name="edit_profile">Редагувати профіль</string>
+    <string name="view_my_contacts">Переглянути мої контакти</string>
+    <string name="facebook_icon">facebook_icon</string>
+    <string name="linkedin_icon">linkedin_icon</string>
+    <string name="instagram_icon">instagram_icon</string>
+
+    <!-- activity_auth strings -->
+
+    <string name="let_s_get_acquainted">Давай знайомитись</string>
+    <string name="fill_out_the_profile_and_go_to_the_application">Заповнюйте профіль і переходьте до заявки!</string>
+    <string name="password">Пароль</string>
+    <string name="email">Електронна пошта</string>
+    <string name="google">Google</string>
+    <string name="remember_me">Запам\'ятати мене</string>
+    <string name="register">Зареєструватися</string>
+    <string name="or">або</string>
+    <string name="terms_text_land">Натиснувши «Зареєструватися», ви погоджуєтеся з нашими Умовами</string>
+    <string name="terms_text_portrait">Натиснувши «Зареєструватися», ви погоджуєтеся\nз нашими Умовами</string>
+    <string name="already_have_an_account">Вже є аккаунт?</string>
+    <string name="sign_in">Увійти</string>
+
+    <!-- Validation email and password -->
+    <string name="dont_use_spaces">Не можна використовувати пробіли</string>
+    <string name="min_8_chars_pass">Мінімум 8 символів</string>
+    <string name="contain_upper_case_chars">Має містити верхній регістр</string>
+    <string name="contain_number_chars">Має містити цифри</string>
+    <string name="invalid_email_address">Невірна адреса електронної пошти</string>
+
+    <!-- Snackbar message -->
+    <string name="not_all_fields_are_field">Не всі поля заповнені</string>
+
+</resources>

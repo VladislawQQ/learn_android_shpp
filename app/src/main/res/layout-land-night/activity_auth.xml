@@ -10,7 +10,7 @@
         android:id="@+id/content_start"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_begin="@dimen/profile_guideline_vertical_margin"
+        app:layout_constraintGuide_begin="@dimen/auth_guideline_vertical_margin"
         android:orientation="vertical"
         />
 
@@ -18,7 +18,7 @@
         android:id="@+id/content_end"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_end="@dimen/profile_guideline_vertical_margin"
+        app:layout_constraintGuide_end="@dimen/auth_guideline_vertical_margin"
         android:orientation="vertical"
         />
 
@@ -26,7 +26,7 @@
         android:id="@+id/content_top"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_begin="@dimen/profile_guideline_horizontal_margin"
+        app:layout_constraintGuide_begin="@dimen/auth_guideline_horizontal_margin_landscape"
         android:orientation="horizontal"
         />
 
@@ -34,7 +34,7 @@
         android:id="@+id/content_bottom"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_end="@dimen/profile_guideline_horizontal_margin"
+        app:layout_constraintGuide_end="@dimen/auth_guideline_horizontal_margin_landscape"
         android:orientation="horizontal"
         />
 
@@ -51,8 +51,6 @@
         app:layout_constraintTop_toTopOf="@id/content_top"
         app:layout_constraintStart_toStartOf="@id/content_start"
         app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"
         />
 
     <TextView
@@ -62,8 +60,8 @@
         style="@style/open_sans_font"
         android:gravity="center"
         android:text="@string/let_s_get_acquainted"
-        android:textColor="@color/main_text_color"
-        android:textSize="@dimen/auth_title_text_size"
+        android:textColor="@color/main_text_color_night"
+        android:textSize="@dimen/auth_title_text_size_landscape"
         />
 
     <TextView
@@ -73,7 +71,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/fill_out_the_profile_and_go_to_the_application"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_text_size_medium"
         tools:ignore="MissingConstraints" />
 
@@ -84,7 +82,6 @@
         app:constraint_referenced_ids="email_container, password_container, remember_me_checkbox"
         android:orientation="vertical"
         app:flow_verticalStyle="packed"
-        android:layout_marginTop="@dimen/margin_medium"
 
         app:layout_constraintTop_toBottomOf="@id/flow_title_text"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -103,6 +100,7 @@
             android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/auth_text_size_big"
             android:lines="1"
             android:textColor="@color/color_edit_text" />
 
@@ -127,6 +125,7 @@
             android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/auth_text_size_big"
             android:inputType="textPassword"
             android:lines="1"
             android:maxLength="16"
@@ -136,13 +135,13 @@
 
     <androidx.appcompat.widget.AppCompatCheckBox
         android:id="@+id/remember_me_checkbox"
-        style="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        style="@style/open_sans_font"
 
-        android:buttonTint="@color/main_text_color"
+        android:buttonTint="@color/main_text_color_night"
         android:text="@string/remember_me"
-        android:textColor="@color/gray_edit_text"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_text_size_big"
         tools:ignore="MissingConstraints" />
 
@@ -151,10 +150,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="button_google, textview_or, button_register"
-        android:orientation="vertical"
-        app:flow_verticalStyle="packed"
-        app:flow_verticalGap="@dimen/auth_buttons_gap"
-        android:layout_marginBottom="@dimen/margin_medium"
+        android:orientation="horizontal"
+        app:flow_horizontalStyle="packed"
+        app:flow_horizontalGap="@dimen/margin_medium"
+
+        android:layout_marginHorizontal="@dimen/auth_buttons_margin_horizontal"
+        android:layout_marginBottom="@dimen/margin_small"
 
         app:layout_constraintTop_toBottomOf="@+id/flow_data_containers"
         app:layout_constraintBottom_toTopOf="@id/textview_terms"
@@ -175,22 +176,21 @@
         app:iconGravity="textStart"
         app:iconTintMode="multiply"
 
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/google_btn_night"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:padding="@dimen/padding_small"
         android:text="@string/google"
-        android:textColor="@color/google_btn_text"
-        android:textSize="@dimen/auth_button_text_size" />
+        android:textColor="@color/main_text_color_night"
+        android:textSize="@dimen/auth_button_text_size_landscape" />
 
     <TextView
         android:id="@+id/textview_or"
         style="@style/open_sans_font"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/or"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_text_size_largest"
         tools:ignore="MissingConstraints" />
 
@@ -204,14 +204,14 @@
         android:gravity="center"
         android:text="@string/register"
         android:textAllCaps="true"
-        android:textColor="@color/main_text_color"
-        android:textSize="@dimen/auth_button_text_size"
+        android:textColor="@color/main_text_color_night"
+        android:textSize="@dimen/auth_button_text_size_landscape"
 
         app:cornerRadius="@dimen/profile_view_contacts_corner_radius"
         android:insetTop="0dp"
         android:insetBottom="0dp"
 
-        app:strokeColor="@color/orange"
+        app:strokeColor="@color/orange_night"
         app:strokeWidth="@dimen/auth_register_button_stroke_width"
         tools:ignore="MissingConstraints" />
 
@@ -223,10 +223,10 @@
 
         style="@style/open_sans_font"
         android:gravity="center"
-        android:text="@string/terms_text_portrait"
-        android:textColor="@color/main_text_color"
+        android:text="@string/terms_text_land"
+        android:textColor="@color/main_text_color_night"
         android:textFontWeight="400"
-        android:textSize="@dimen/auth_text_size_medium"
+        android:textSize="@dimen/auth_text_size_small"
 
         app:layout_constraintStart_toStartOf="@id/content_start"
         app:layout_constraintEnd_toEndOf="@id/content_end"
@@ -253,9 +253,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/already_have_an_account"
-        android:textColor="@color/gray_edit_text"
-        android:textSize="@dimen/auth_text_size_big"
-
+        android:textColor="@color/gray_text_night"
+        android:textSize="@dimen/auth_text_size_medium"
         />
 
     <TextView
@@ -265,8 +264,8 @@
 
         style="@style/open_sans_font"
         android:text="@string/sign_in"
-        android:textColor="@color/main_text_color"
-        android:textSize="@dimen/auth_text_size_big"
+        android:textColor="@color/main_text_color_night"
+        android:textSize="@dimen/auth_text_size_medium"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

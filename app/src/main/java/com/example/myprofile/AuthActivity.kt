@@ -1,11 +1,9 @@
 package com.example.myprofile
 
-import android.annotation.SuppressLint
 import android.app.ActivityOptions
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.util.Patterns
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -28,7 +26,9 @@ class AuthActivity : AppCompatActivity() {
 
         // Create SharedPreferences xml file
         sharedPreferences = this.getSharedPreferences("autoLogin", MODE_PRIVATE)
-
+//        val editor = sharedPreferences.edit()
+//        editor.clear()
+//        editor.apply()
         // Check if "remember me" is true
         // then autologin to profile and start "my profile" intent
         if (sharedPreferences.getBoolean("rememberMe", false)) {
@@ -44,7 +44,7 @@ class AuthActivity : AppCompatActivity() {
         // Check if fields with email or password is valid
         // then start "my profile" intent
         // else show Snackbar
-        binding.registerButton.setOnClickListener {
+        binding.buttonRegister.setOnClickListener {
             if (!fieldsIsEmpty() &&
                 binding.passwordEditText.text.toString() != "" &&
                 binding.emailEditText.text.toString() != "") {
@@ -65,14 +65,14 @@ class AuthActivity : AppCompatActivity() {
 
                 val snackBar: Snackbar = Snackbar.make(
                     binding.root,
-                    "Not all fields are filled",
+                    getString(R.string.not_all_fields_are_field),
                     Snackbar.LENGTH_LONG
                 ).setTextColor(viewColor)
 
                 snackBar.setBackgroundTint(
                     ContextCompat.getColor(
                         this,
-                        R.color.white_edit_text
+                        R.color.color_edit_text
                     )
                 )
 
@@ -125,7 +125,7 @@ class AuthActivity : AppCompatActivity() {
 
         val isValid = Patterns.EMAIL_ADDRESS.matcher(emailText).matches()
         if (!isValid) {
-            return "Invalid Email Address"
+            return getString(R.string.invalid_email_address)
         }
 
         return null
@@ -149,13 +149,13 @@ class AuthActivity : AppCompatActivity() {
         val digitsCaseRegex = Regex("[0-9]")
 
         return if (passwordText.contains(" ")) {
-            return "Don't use spaces"
+            return getString(R.string.dont_use_spaces)
         } else if (passwordText.length < 8) {
-            "Minimum 8 character password"
+            getString(R.string.min_8_chars_pass)
         } else if (!upperCaseRegex.containsMatchIn(passwordText)) {
-            "Must contain upper-case characters"
+            getString(R.string.contain_upper_case_chars)
         } else if (!digitsCaseRegex.containsMatchIn(passwordText)) {
-            "Must contain number characters"
+            getString(R.string.contain_number_chars)
         } else null
     }
 }

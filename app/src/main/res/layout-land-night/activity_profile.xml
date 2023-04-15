@@ -11,7 +11,7 @@
         android:id="@+id/top_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/view_color"
+        android:background="@color/view_color_night"
         app:layout_constraintBottom_toTopOf="@id/bottom_view"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_weight="0.5" />
@@ -20,7 +20,7 @@
         android:id="@+id/bottom_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:background="@color/view_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_view"
         app:layout_constraintVertical_weight="0.5" />
@@ -59,7 +59,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/settings"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/profile_settings_text_size"
 
         app:layout_constraintEnd_toEndOf="@id/content_end"
@@ -89,7 +89,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin_small"
         android:text="@string/name_surname"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/profile_name_text_size"
 
         app:layout_constraintBottom_toTopOf="@id/textview_career"
@@ -105,7 +105,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin_small"
         android:text="@string/career"
-        android:textColor="@color/gray_text"
+        android:textColor="@color/gray_text_night"
         android:textSize="@dimen/profile_career_text_size"
 
         app:layout_constraintBottom_toTopOf="@+id/textview_address"
@@ -121,7 +121,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin_small"
         android:text="@string/home_address"
-        android:textColor="@color/gray_text"
+        android:textColor="@color/gray_text_night"
         android:textSize="@dimen/profile_address_text_size"
 
         app:layout_constraintBottom_toBottomOf="@id/top_view"
@@ -150,7 +150,7 @@
         android:contentDescription="@string/facebook_icon"
         android:focusable="true"
 
-        app:srcCompat="@drawable/facebook_icon_vector"
+        app:srcCompat="@drawable/facebook_icon_vector_night"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -159,7 +159,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/linkedin_icon"
 
-        app:srcCompat="@drawable/linked_in_icon_vector"
+        app:srcCompat="@drawable/linked_in_icon_vector_night"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -168,7 +168,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/instagram_icon"
 
-        app:srcCompat="@drawable/instagram_icon_vector"
+        app:srcCompat="@drawable/instagram_icon_vector_night"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -179,7 +179,7 @@
         android:layout_marginBottom="@dimen/margin_medium"
         android:gravity="center_horizontal"
         android:text="@string/go_to_settings_and_fill_out_the_profile"
-        android:textColor="@color/black"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/profile_go_to_settings_text_size"
 
         app:layout_constraintBottom_toTopOf="@id/button_flow"
@@ -205,9 +205,8 @@
         style="@style/edit_profile_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/white"
-        app:strokeColor="@color/view_color"
+        android:textColor="@color/gray_text_night"
+        app:strokeColor="@color/gray_text_night"
         app:strokeWidth="@dimen/profile_edit_profile_stroke_width" />
 
     <Button
@@ -215,11 +214,11 @@
         style="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="@color/orange_night"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:text="@string/view_my_contacts"
-        android:textColor="@color/main_text_color"
+        android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/profile_button_text_size"
         app:cornerRadius="@dimen/profile_view_contacts_corner_radius"
         tools:ignore="MissingConstraints" />
