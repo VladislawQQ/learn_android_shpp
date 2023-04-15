@@ -26,9 +26,7 @@ class AuthActivity : AppCompatActivity() {
 
         // Create SharedPreferences xml file
         sharedPreferences = this.getSharedPreferences("autoLogin", MODE_PRIVATE)
-//        val editor = sharedPreferences.edit()
-//        editor.clear()
-//        editor.apply()
+
         // Check if "remember me" is true
         // then autologin to profile and start "my profile" intent
         if (sharedPreferences.getBoolean("rememberMe", false)) {
