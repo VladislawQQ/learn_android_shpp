@@ -3,9 +3,9 @@ package com.example.myprofile
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myprofile.databinding.ActivityProfileBinding
+import java.util.*
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
@@ -18,21 +18,26 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Create SharedPreferences xml file
-        sharedPreferences = this.getSharedPreferences("autoLogin", MODE_PRIVATE)
+        sharedPreferences = this.getSharedPreferences(SHARED_PREF_FILE_NAME, MODE_PRIVATE)
 
-        val email = sharedPreferences.getString("email", "").toString()
+        val email = sharedPreferences.getString(KEY_EMAIL, "").toString()
 
         val parsedName = parseEmail(email)
 
-        val name = parsedName[0].substring(0,1).uppercase() + parsedName[0].substring(1).lowercase()
-        val surname = parsedName[1].substring(0,1).uppercase() + parsedName[1].substring(1).lowercase()
+        val name = parsedName.first().replaceFirstChar { it.titlecase(Locale.getDefault()) }
+        val surname = parsedName[1].replaceFirstChar { it.titlecase(Locale.getDefault()) }
 
         binding.textviewProfileName.text = "$name $surname"
     }
 
     private fun parseEmail(email: String): List<String> {
-
-        return "@.*\$".toRegex().replace(email, "")
+        return REGEX_EMAIL_PARSE.toRegex().replace(email, "")
             .split(".")
+    }
+
+    companion object {
+        private const val SHARED_PREF_FILE_NAME = "autoLogin"
+        private const val KEY_EMAIL = "email"
+        private const val REGEX_EMAIL_PARSE = "@.*\$"
     }
 }

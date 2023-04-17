@@ -6,14 +6,8 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Patterns
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
 import com.example.myprofile.databinding.ActivityAuthBinding
-import com.google.android.material.snackbar.Snackbar
-
-private const val KEY_EMAIL = "email"
-private const val KEY_PASSWORD = "password"
-private const val KEY_REMEMBERME = "rememberMe"
 
 class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthBinding
@@ -25,14 +19,11 @@ class AuthActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Create SharedPreferences xml file
-        sharedPreferences = this.getSharedPreferences("autoLogin", MODE_PRIVATE)
-//        val editor = sharedPreferences.edit()
-//        editor.clear()
-//        editor.apply()
+        sharedPreferences = this.getSharedPreferences(SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE)
+
         // Check if "remember me" is true
         // then autologin to profile and start "my profile" intent
-        if (sharedPreferences.getBoolean("rememberMe", false)) {
-
+        if (sharedPreferences.getBoolean(KEY_REMEMBERME, false)) {
             intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
@@ -49,34 +40,13 @@ class AuthActivity : AppCompatActivity() {
                 binding.passwordEditText.text.toString() != "" &&
                 binding.emailEditText.text.toString() != "") {
 
-                if (binding.rememberMeCheckbox.isChecked) {
-                    putDataToSharedPreferences()
-                }
+                putDataToSharedPreferences()
 
                 // init and start profile activity with anim
                 intent = Intent(this, ProfileActivity::class.java)
-
-                intent.putExtra("usersEmail", binding.emailEditText.text.toString())
-
+                intent.putExtra(KEY_USERS_EMAIL, binding.emailEditText.text.toString())
                 startActivity(intent,
                     ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
-            } else {
-                val viewColor = ContextCompat.getColor(this, R.color.view_color)
-
-                val snackBar: Snackbar = Snackbar.make(
-                    binding.root,
-                    getString(R.string.not_all_fields_are_field),
-                    Snackbar.LENGTH_LONG
-                ).setTextColor(viewColor)
-
-                snackBar.setBackgroundTint(
-                    ContextCompat.getColor(
-                        this,
-                        R.color.color_edit_text
-                    )
-                )
-
-                snackBar.show()
             }
         }
     }
@@ -145,18 +115,25 @@ class AuthActivity : AppCompatActivity() {
     private fun passwordIsValid(): String? {
         val passwordText = binding.passwordEditText.text.toString()
 
-        val upperCaseRegex = Regex("[A-Z]")
-        val digitsCaseRegex = Regex("[0-9]")
-
         return if (passwordText.contains(" ")) {
             return getString(R.string.dont_use_spaces)
         } else if (passwordText.length < 8) {
             getString(R.string.min_8_chars_pass)
-        } else if (!upperCaseRegex.containsMatchIn(passwordText)) {
+        } else if (!REGEX_UPPER_CASE.toRegex().containsMatchIn(passwordText)) {
             getString(R.string.contain_upper_case_chars)
-        } else if (!digitsCaseRegex.containsMatchIn(passwordText)) {
+        } else if (!REGEX_DIGITS_CASE.toRegex().containsMatchIn(passwordText)) {
             getString(R.string.contain_number_chars)
         } else null
+    }
+
+    companion object {
+        private const val KEY_EMAIL = "email"
+        private const val KEY_PASSWORD = "password"
+        private const val KEY_REMEMBERME = "rememberMe"
+        private const val REGEX_UPPER_CASE = "[A-Z]"
+        private const val REGEX_DIGITS_CASE = "[0-9]"
+        private const val KEY_USERS_EMAIL = "usersEmail"
+        private const val SHARED_PREFERENCES_FILE_NAME = "autoLogin"
     }
 }
 

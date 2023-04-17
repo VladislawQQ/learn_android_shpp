@@ -11,6 +11,9 @@
     <dimen name="padding_big">24dp</dimen>
     <dimen name="padding_large">36dp</dimen>
 
+    <dimen name="button_stroke_width">2dp</dimen>
+    <dimen name="button_corner_radius">6dp</dimen>
+
     <!-- activity_profile dimens -->
 
     <dimen name="profile_guideline_vertical_margin">16dp</dimen>
@@ -29,8 +32,6 @@
     <dimen name="profile_go_to_settings_text_size">14sp</dimen>
 
     <dimen name="profile_button_padding">16dp</dimen>
-    <dimen name="profile_edit_profile_stroke_width">2dp</dimen>
-    <dimen name="profile_view_contacts_corner_radius">6dp</dimen>
 
     <!-- activity_auth dimens -->
 
@@ -50,9 +51,7 @@
     <dimen name="auth_buttons_gap">8dp</dimen>
     <dimen name="auth_buttons_margin_horizontal">48dp</dimen>
 
-    <dimen name="auth_register_button_radius">6dp</dimen>
     <dimen name="auth_google_button_radius">6dp</dimen>
-    <dimen name="auth_register_button_stroke_width">2dp</dimen>
 
     <dimen name="auth_button_text_size">16sp</dimen>
     <dimen name="auth_title_text_size">24sp</dimen>
