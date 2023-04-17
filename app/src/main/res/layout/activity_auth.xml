@@ -1,70 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/view_color">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_start"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_begin="@dimen/profile_guideline_vertical_margin"
         android:orientation="vertical"
-        />
+        app:layout_constraintGuide_begin="@dimen/profile_guideline_vertical_margin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_end"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_end="@dimen/profile_guideline_vertical_margin"
         android:orientation="vertical"
-        />
+        app:layout_constraintGuide_end="@dimen/profile_guideline_vertical_margin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_top"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_begin="@dimen/profile_guideline_horizontal_margin"
         android:orientation="horizontal"
-        />
+        app:layout_constraintGuide_begin="@dimen/profile_guideline_horizontal_margin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_bottom"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_end="@dimen/profile_guideline_horizontal_margin"
         android:orientation="horizontal"
-        />
+        app:layout_constraintGuide_end="@dimen/profile_guideline_horizontal_margin" />
 
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow_title_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="textview_label_1, textview_label_2"
         android:orientation="vertical"
-        app:flow_verticalStyle="packed"
+        app:constraint_referenced_ids="textview_label_1, textview_label_2"
         app:flow_verticalGap="@dimen/margin_small"
+        app:flow_verticalStyle="packed"
 
-        app:layout_constraintTop_toTopOf="@id/content_top"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        />
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toTopOf="@id/content_top"
+        app:layout_constraintVertical_bias="0.1" />
 
     <TextView
         android:id="@+id/textview_label_1"
+        style="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/open_sans_font"
         android:gravity="center"
         android:text="@string/let_s_get_acquainted"
         android:textColor="@color/main_text_color"
-        android:textSize="@dimen/auth_title_text_size"
-        />
+        android:textSize="@dimen/auth_title_text_size" />
 
     <TextView
         android:id="@+id/textview_label_2"
@@ -81,46 +75,47 @@
         android:id="@+id/flow_data_containers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="email_container, password_container, remember_me_checkbox"
-        android:orientation="vertical"
-        app:flow_verticalStyle="packed"
         android:layout_marginTop="@dimen/margin_medium"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="email_container, password_container, remember_me_checkbox"
+        app:flow_verticalStyle="packed"
 
-        app:layout_constraintTop_toBottomOf="@id/flow_title_text"
-        app:layout_constraintStart_toStartOf="@id/content_start"
         app:layout_constraintEnd_toEndOf="@id/content_end"
-        />
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/flow_title_text" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_container"
+        style="@style/edit_text_auth_activity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/edit_text_auth_activity"
         app:errorEnabled="true"
         app:helperTextTextColor="@color/color_error_msg">
 
+
+        <!--android:inputType="textEmailAddress"-->
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             android:lines="1"
-            android:textColor="@color/color_edit_text" />
+            android:textColor="@color/color_edit_text"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_container"
+        style="@style/edit_text_auth_activity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/edit_text_auth_activity"
+        android:hint="@string/password"
         app:counterEnabled="true"
         app:counterMaxLength="16"
         app:errorEnabled="true"
-
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/gray_edit_text"
-
-        android:hint="@string/password"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -150,18 +145,17 @@
         android:id="@+id/flow_buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="button_google, textview_or, button_register"
-        android:orientation="vertical"
-        app:flow_verticalStyle="packed"
-        app:flow_verticalGap="@dimen/auth_buttons_gap"
         android:layout_marginBottom="@dimen/margin_medium"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="button_google, textview_or, button_register"
+        app:flow_verticalGap="@dimen/auth_buttons_gap"
+        app:flow_verticalStyle="packed"
 
-        app:layout_constraintTop_toBottomOf="@+id/flow_data_containers"
         app:layout_constraintBottom_toTopOf="@id/textview_terms"
-        app:layout_constraintVertical_bias="1"
-        app:layout_constraintStart_toStartOf="@id/content_start"
         app:layout_constraintEnd_toEndOf="@id/content_end"
-        />
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toBottomOf="@+id/flow_data_containers"
+        app:layout_constraintVertical_bias="1" />
 
 
     <com.google.android.material.button.MaterialButton
@@ -170,18 +164,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        app:cornerRadius="@dimen/auth_google_button_radius"
-        app:icon="@drawable/google_btn_icon"
-        app:iconGravity="textStart"
-        app:iconTintMode="multiply"
-
         android:backgroundTint="@color/white"
         android:insetTop="0dp"
         android:insetBottom="0dp"
         android:padding="@dimen/padding_small"
+
         android:text="@string/google"
         android:textColor="@color/google_btn_text"
-        android:textSize="@dimen/auth_button_text_size" />
+        android:textSize="@dimen/auth_button_text_size"
+        app:cornerRadius="@dimen/auth_google_button_radius"
+        app:icon="@drawable/google_btn_icon"
+        app:iconGravity="textStart"
+        app:iconTintMode="multiply" />
 
     <TextView
         android:id="@+id/textview_or"
@@ -194,22 +188,23 @@
         android:textSize="@dimen/auth_text_size_largest"
         tools:ignore="MissingConstraints" />
 
+<!--<androidx.appcompat.widget.AppCompatButton-->
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_register"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
         style="@style/open_sans_font"
-        android:gravity="center"
-        android:text="@string/register"
-        android:textAllCaps="true"
-        android:textColor="@color/main_text_color"
-        android:textSize="@dimen/auth_button_text_size"
+        android:layout_width="0dp"
 
-        app:cornerRadius="@dimen/profile_view_contacts_corner_radius"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:insetTop="0dp"
         android:insetBottom="0dp"
+        android:text="@string/register"
+        android:textAllCaps="true"
+
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/auth_button_text_size"
+        app:cornerRadius="@dimen/profile_view_contacts_corner_radius"
 
         app:strokeColor="@color/orange"
         app:strokeWidth="@dimen/auth_register_button_stroke_width"
@@ -217,35 +212,33 @@
 
     <TextView
         android:id="@+id/textview_terms"
+        style="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_small"
 
-        style="@style/open_sans_font"
+        android:layout_marginBottom="@dimen/margin_small"
         android:gravity="center"
         android:text="@string/terms_text_portrait"
         android:textColor="@color/main_text_color"
         android:textFontWeight="400"
         android:textSize="@dimen/auth_text_size_medium"
 
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintBottom_toTopOf="@id/flow_textview_sign_in"
-        />
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start" />
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/flow_textview_sign_in"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="textview_have_acc, textview_sign_in"
         android:orientation="horizontal"
-        app:flow_horizontalStyle="packed"
+        app:constraint_referenced_ids="textview_have_acc, textview_sign_in"
         app:flow_horizontalGap="@dimen/auth_sign_in_texts_gap"
+        app:flow_horizontalStyle="packed"
 
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintBottom_toBottomOf="@id/content_bottom"
-        />
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start" />
 
     <TextView
         android:id="@+id/textview_have_acc"
@@ -260,10 +253,10 @@
 
     <TextView
         android:id="@+id/textview_sign_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
         style="@style/open_sans_font"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
         android:text="@string/sign_in"
         android:textColor="@color/main_text_color"
         android:textSize="@dimen/auth_text_size_big"

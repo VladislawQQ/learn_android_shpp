@@ -3,9 +3,10 @@ package com.example.myprofile
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
+
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myprofile.databinding.ActivityProfileBinding
+import java.util.*
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
@@ -27,11 +28,14 @@ class ProfileActivity : AppCompatActivity() {
         val name = parsedName[0].substring(0,1).uppercase() + parsedName[0].substring(1).lowercase()
         val surname = parsedName[1].substring(0,1).uppercase() + parsedName[1].substring(1).lowercase()
 
+//        val name = parsedName.first().replaceFirstChar { it.titlecase(Locale.getDefault()) }
+//        val surname = parsedName[1].replaceFirstChar { it.titlecase(Locale.getDefault()) }
         binding.textviewProfileName.text = "$name $surname"
     }
 
     private fun parseEmail(email: String): List<String> {
 
+        //TODO regex теж в константи
         return "@.*\$".toRegex().replace(email, "")
             .split(".")
     }

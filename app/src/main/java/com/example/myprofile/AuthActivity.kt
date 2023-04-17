@@ -15,6 +15,11 @@ private const val KEY_EMAIL = "email"
 private const val KEY_PASSWORD = "password"
 private const val KEY_REMEMBERME = "rememberMe"
 
+//TODO всі літерали до констант, краще винести в окремий файл взагалі
+//TODO коли чекбокс не увікнутий, не передаються дані в profilleActivity
+//TODO декомпозицію ніхто не відміняв ;)   треба привести onCreate в читабельний стан
+//TODO крешиться, якщо в е-мейлі ім'я не розділено крапкою
+
 class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthBinding
     private lateinit var sharedPreferences: SharedPreferences
@@ -45,7 +50,8 @@ class AuthActivity : AppCompatActivity() {
         binding.buttonRegister.setOnClickListener {
             if (!fieldsIsEmpty() &&
                 binding.passwordEditText.text.toString() != "" &&
-                binding.emailEditText.text.toString() != "") {
+                binding.emailEditText.text.toString() != ""
+            ) {
 
                 if (binding.rememberMeCheckbox.isChecked) {
                     putDataToSharedPreferences()
@@ -56,8 +62,10 @@ class AuthActivity : AppCompatActivity() {
 
                 intent.putExtra("usersEmail", binding.emailEditText.text.toString())
 
-                startActivity(intent,
-                    ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+                startActivity(
+                    intent,
+                    ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+                )
             } else {
                 val viewColor = ContextCompat.getColor(this, R.color.view_color)
 
