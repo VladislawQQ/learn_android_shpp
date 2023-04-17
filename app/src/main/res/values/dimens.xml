@@ -1,37 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
-    <dimen name="settings_top_margin">16dp</dimen>
-    <dimen name="settings_text_size">24sp</dimen>
 
-    <dimen name="profile_name_top_margin">24dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_big">24dp</dimen>
+    <dimen name="margin_large">36dp</dimen>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_big">24dp</dimen>
+    <dimen name="padding_large">36dp</dimen>
+
+    <!-- activity_profile dimens -->
+
+    <dimen name="profile_guideline_vertical_margin">16dp</dimen>
+    <dimen name="profile_guideline_horizontal_margin">16dp</dimen>
+    <dimen name="profile_icon_gap">32dp</dimen>
+    <dimen name="profile_button_gap">16dp</dimen>
+
+    <dimen name="profile_photo_size">113dp</dimen>
+    <dimen name="profile_photo_size_land">70dp</dimen>
+
+    <dimen name="profile_settings_text_size">24sp</dimen>
     <dimen name="profile_name_text_size">18sp</dimen>
+    <dimen name="profile_button_text_size">16sp</dimen>
+    <dimen name="profile_career_text_size">14sp</dimen>
+    <dimen name="profile_address_text_size">14sp</dimen>
+    <dimen name="profile_go_to_settings_text_size">14sp</dimen>
 
-    <dimen name="profile_avatar_top_margin">24dp</dimen>
+    <dimen name="profile_button_padding">16dp</dimen>
+    <dimen name="profile_edit_profile_stroke_width">2dp</dimen>
+    <dimen name="profile_view_contacts_corner_radius">6dp</dimen>
 
-    <dimen name="career_text_size">14sp</dimen>
-    <dimen name="career_margin_top">8dp</dimen>
+    <!-- activity_auth dimens -->
 
-    <dimen name="address_text_size">14sp</dimen>
-    <dimen name="address_margin_top">16dp</dimen>
+    <dimen name="auth_guideline_vertical_margin">16dp</dimen>
+    <dimen name="auth_guideline_horizontal_margin">16dp</dimen>
 
-    <dimen name="icons_ll_margin_top">62dp</dimen>
-    <dimen name="center_icon_margin_horizontal">32dp</dimen>
+    <dimen name="auth_guideline_vertical_margin_landscape">16dp</dimen>
+    <dimen name="auth_guideline_horizontal_margin_landscape">8dp</dimen>
 
-    <dimen name="fill_out_profile_text_size">14sp</dimen>
-    <dimen name="fill_out_profile_margin_top">62dp</dimen>
+    <dimen name="auth_text_size_small">8sp</dimen>
+    <dimen name="auth_text_size_medium">12sp</dimen>
+    <dimen name="auth_text_size_big">14sp</dimen>
+    <dimen name="auth_text_size_larger">16sp</dimen>
+    <dimen name="auth_text_size_largest">18sp</dimen>
 
-    <dimen name="edit_profile_text_size">14sp</dimen>
-    <dimen name="edit_profile_margin_top">16dp</dimen>
-    <dimen name="edit_profile_margin_horizontal">16dp</dimen>
-    <dimen name="edit_profile_stroke_width">2dp</dimen>
+    <dimen name="auth_sign_in_texts_gap">12dp</dimen>
+    <dimen name="auth_buttons_gap">8dp</dimen>
+    <dimen name="auth_buttons_margin_horizontal">48dp</dimen>
 
-    <dimen name="view_contacts_margin_horizontal">16dp</dimen>
-    <dimen name="view_contacts_margin_top">16dp</dimen>
-    <dimen name="view_contacts_margin_bottom">16dp</dimen>
-    <dimen name="view_contacts_text_size">16sp</dimen>
-    <dimen name="view_contacts_corner_radius">6dp</dimen>
+    <dimen name="auth_register_button_radius">6dp</dimen>
+    <dimen name="auth_google_button_radius">6dp</dimen>
+    <dimen name="auth_register_button_stroke_width">2dp</dimen>
 
+    <dimen name="auth_button_text_size">16sp</dimen>
+    <dimen name="auth_title_text_size">24sp</dimen>
 
-
+    <dimen name="auth_button_text_size_landscape">12sp</dimen>
+    <dimen name="auth_title_text_size_landscape">20sp</dimen>
 </resources>

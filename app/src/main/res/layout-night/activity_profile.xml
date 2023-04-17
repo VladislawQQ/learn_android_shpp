@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/view_color_night"
+        app:layout_constraintBottom_toTopOf="@id/bottom_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="0.5" />
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/view_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_view"
+        app:layout_constraintVertical_weight="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/profile_guideline_vertical_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/profile_guideline_vertical_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/profile_guideline_horizontal_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/profile_guideline_horizontal_margin" />
+
+    <TextView
+        android:id="@+id/textview_settings"
+        style="@style/open_sans_font"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textColor="@color/main_text_color_night"
+        android:textSize="@dimen/profile_settings_text_size"
+
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toTopOf="@id/content_top" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageview_profile_photo"
+        android:layout_width="@dimen/profile_photo_size"
+        android:layout_height="@dimen/profile_photo_size"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_big"
+        android:src="@drawable/profile_photo"
+        app:layout_constraintBottom_toTopOf="@id/textview_profile_name"
+
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/textview_settings"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+    <TextView
+        android:id="@+id/textview_profile_name"
+        style="@style/open_sans_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/name_surname"
+        android:textColor="@color/main_text_color_night"
+        android:textSize="@dimen/profile_name_text_size"
+
+        app:layout_constraintBottom_toTopOf="@id/textview_career"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@+id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/imageview_profile_photo" />
+
+    <TextView
+        android:id="@+id/textview_career"
+        style="@style/open_sans_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/career"
+        android:textColor="@color/gray_text_night"
+        android:textSize="@dimen/profile_career_text_size"
+
+        app:layout_constraintBottom_toTopOf="@+id/textview_address"
+        app:layout_constraintEnd_toEndOf="@+id/content_end"
+        app:layout_constraintStart_toStartOf="@+id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/textview_profile_name" />
+
+    <TextView
+        android:id="@+id/textview_address"
+        style="@style/open_sans_font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/home_address"
+        android:textColor="@color/gray_text_night"
+        android:textSize="@dimen/profile_address_text_size"
+
+        app:layout_constraintBottom_toBottomOf="@id/top_view"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@+id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/textview_career" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="imageview_facebook, imageview_linked_in, imageview_instagram"
+        app:flow_horizontalGap="@dimen/profile_icon_gap"
+        app:flow_horizontalStyle="packed"
+        app:flow_wrapMode="aligned"
+
+        app:layout_constraintBottom_toTopOf="@id/textview_fill_out_profile"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/top_view"/>
+
+    <ImageView
+        android:id="@+id/imageview_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/facebook_icon"
+        android:focusable="true"
+
+        app:srcCompat="@drawable/facebook_icon_vector_night"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageview_linked_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/linked_in_icon_vector_night"
+
+        android:contentDescription="@string/linkedin_icon"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageview_instagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/instagram_icon_vector_night"
+
+        android:contentDescription="@string/instagram_icon"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_textview_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="textview_fill_out_profile, button_edit_profile, button_view_contacts"
+        app:flow_verticalGap="@dimen/profile_button_gap"
+        app:flow_verticalStyle="packed"
+
+        app:layout_constraintBottom_toBottomOf="@id/content_bottom"
+        app:layout_constraintEnd_toEndOf="@id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start" />
+
+    <TextView
+        android:id="@+id/textview_fill_out_profile"
+        style="@style/open_sans_font"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/go_to_settings_and_fill_out_the_profile"
+        android:textColor="@color/main_text_color_night"
+        android:textSize="@dimen/profile_go_to_settings_text_size" />
+
+    <Button
+        android:id="@+id/button_edit_profile"
+        style="@style/edit_profile_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/gray_text_night"
+        android:backgroundTint="@android:color/transparent"
+        app:strokeColor="@color/gray_text_night"
+        app:strokeWidth="@dimen/profile_edit_profile_stroke_width"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_view_contacts"
+        style="@style/open_sans_font"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange_night"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingVertical="@dimen/profile_button_padding"
+        android:text="@string/view_my_contacts"
+        android:textColor="@color/main_text_color_night"
+        android:textSize="@dimen/profile_button_text_size"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
