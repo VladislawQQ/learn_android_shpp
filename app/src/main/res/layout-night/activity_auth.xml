@@ -59,7 +59,7 @@
         android:id="@+id/textview_label_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:gravity="center"
         android:text="@string/let_s_get_acquainted"
         android:textColor="@color/main_text_color_night"
@@ -68,7 +68,7 @@
 
     <TextView
         android:id="@+id/textview_label_2"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -140,7 +140,7 @@
         android:layout_height="wrap_content"
 
         android:buttonTint="@color/main_text_color_night"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:text="@string/remember_me"
         android:textColor="@color/gray_edit_text"
         android:textSize="@dimen/auth_text_size_big"
@@ -166,7 +166,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_google"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
@@ -185,7 +185,7 @@
 
     <TextView
         android:id="@+id/textview_or"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -200,20 +200,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:gravity="center"
         android:text="@string/register"
         android:textAllCaps="true"
         android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_button_text_size"
 
-        app:cornerRadius="@dimen/profile_view_contacts_corner_radius"
+        app:cornerRadius="@dimen/button_corner_radius"
         android:insetTop="0dp"
         android:insetBottom="0dp"
 
         android:backgroundTint="@android:color/transparent"
         app:strokeColor="@color/orange_night"
-        app:strokeWidth="@dimen/auth_register_button_stroke_width"
+        app:strokeWidth="@dimen/button_stroke_width"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -222,7 +222,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_small"
 
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:gravity="center"
         android:text="@string/terms_text_portrait"
         android:textColor="@color/main_text_color_night"
@@ -250,7 +250,7 @@
 
     <TextView
         android:id="@+id/textview_have_acc"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/already_have_an_account"
@@ -263,7 +263,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:text="@string/sign_in"
         android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/auth_text_size_big"

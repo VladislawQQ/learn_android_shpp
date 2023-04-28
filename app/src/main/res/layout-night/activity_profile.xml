@@ -55,7 +55,7 @@
 
     <TextView
         android:id="@+id/textview_settings"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/settings"
@@ -84,7 +84,7 @@
 
     <TextView
         android:id="@+id/textview_profile_name"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -100,7 +100,7 @@
 
     <TextView
         android:id="@+id/textview_career"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -116,7 +116,7 @@
 
     <TextView
         android:id="@+id/textview_address"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -187,7 +187,7 @@
 
     <TextView
         android:id="@+id/textview_fill_out_profile"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -195,30 +195,26 @@
         android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/profile_go_to_settings_text_size" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_edit_profile"
-        style="@style/edit_profile_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/edit_profile_btn_night"
+        android:text="@string/edit_profile"
+        android:background="@drawable/edit_profile_button_border_night"
+        tools:ignore="MissingConstraints"/>
 
-        android:textColor="@color/gray_text_night"
-        android:backgroundTint="@android:color/transparent"
-        app:strokeColor="@color/gray_text_night"
-        app:strokeWidth="@dimen/profile_edit_profile_stroke_width"
-        tools:ignore="MissingConstraints" />
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_view_contacts"
-        style="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange_night"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:paddingVertical="@dimen/profile_button_padding"
+        android:background="@drawable/view_my_contacts_button"
+        android:textAppearance="@style/open_sans_font"
         android:text="@string/view_my_contacts"
-        android:textColor="@color/main_text_color_night"
+        android:textColor="@color/main_text_color"
         android:textSize="@dimen/profile_button_text_size"
+
+        android:paddingVertical="@dimen/profile_button_padding"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,11 +38,20 @@
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/MyProfile/app/src/main/res/layout/auth_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/drawable/button_border.xml" value="0.1705" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/drawable/edit_profile_button_border.xml" value="0.1705" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/drawable/edit_profile_button_border_night.xml" value="0.1705" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/drawable/google_btn_icon.xml" value="0.1705" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/drawable/shape.xml" value="0.1705" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/drawable/view_my_contacts_button.xml" value="0.1705" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/drawable/view_my_contacts_button_night.xml" value="0.1705" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout-land-night/activity_auth.xml" value="0.2421875" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout-land-night/activity_profile.xml" value="0.2" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout-land/activity_auth.xml" value="0.2421875" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout-land/activity_profile.xml" value="0.2421875" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout-night/activity_auth.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout-night/activity_profile.xml" value="0.25" />
         <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout/activity_auth.xml" value="0.264" />
-        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout/activity_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/hallo/AndroidStudioProjects/learn_android_shpp/app/src/main/res/layout/activity_profile.xml" value="0.2" />
       </map>
     </option>
   </component>

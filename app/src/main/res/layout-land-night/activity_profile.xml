@@ -200,27 +200,26 @@
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_edit_profile"
-        style="@style/edit_profile_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/gray_text_night"
-        app:strokeColor="@color/gray_text_night"
-        app:strokeWidth="@dimen/profile_edit_profile_stroke_width" />
+        android:textAppearance="@style/edit_profile_btn_night"
+        android:text="@string/edit_profile"
+        android:background="@drawable/edit_profile_button_border_night"
+        tools:ignore="MissingConstraints"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_view_contacts"
-        style="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange_night"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
+        android:background="@drawable/view_my_contacts_button"
+        android:textAppearance="@style/open_sans_font"
         android:text="@string/view_my_contacts"
         android:textColor="@color/main_text_color_night"
         android:textSize="@dimen/profile_button_text_size"
-        app:cornerRadius="@dimen/profile_view_contacts_corner_radius"
+
+        android:paddingVertical="@dimen/profile_button_padding"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

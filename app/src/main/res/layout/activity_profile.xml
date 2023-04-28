@@ -55,7 +55,7 @@
 
     <TextView
         android:id="@+id/textview_settings"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/settings"
@@ -84,7 +84,7 @@
 
     <TextView
         android:id="@+id/textview_profile_name"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -100,7 +100,7 @@
 
     <TextView
         android:id="@+id/textview_career"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -116,7 +116,7 @@
 
     <TextView
         android:id="@+id/textview_address"
-        style="@style/open_sans_font"
+        android:textAppearance="@style/open_sans_font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
