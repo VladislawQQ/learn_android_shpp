@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/register_button_border_pressed_state" /> <!-- pressed -->
+
+    <item android:state_focused="true"
+        android:drawable="@drawable/register_button_border_focused_state" /> <!-- focused -->
+
+    <item android:state_hovered="true"
+        android:drawable="@drawable/register_button_border_hovered_state" /> <!-- hovered -->
+
+    <item android:drawable="@drawable/register_button_border" /> <!-- default -->
+
+</selector>
