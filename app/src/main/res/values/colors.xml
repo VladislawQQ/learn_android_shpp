@@ -14,6 +14,9 @@
     <color name="orange">#FB5E06</color>
     <color name="gray_text">#B2B2B3</color>
     <color name="gray_edit_text">#BDBDBD</color>
+    <color name="gray_edit_text_focused_state">#4DFB5E06</color>
+    <color name="gray_edit_text_pressed_state">#80FB5E06</color>
+    <color name="gray_edit_text_hovered_state">#96FB5E06</color>
     <color name="color_edit_text">#FAFAFA</color>
     <color name="color_error_msg">#F93E3E</color>
     <color name="google_btn_text">#18181F</color>

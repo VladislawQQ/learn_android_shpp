@@ -1,6 +1,5 @@
 package com.example.myprofile
 
-import android.app.ActivityOptions
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -16,19 +15,19 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Check if "remember me" is true
-        // then autologin to profile and start "my profile" intent
-        if (sharedPreferences.getBoolean(KEY_REMEMBERME, false)) {
-            intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent,
-                ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
-        }
-
         binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Create SharedPreferences xml file
         sharedPreferences = this.getSharedPreferences(SHARED_PREFERENCES_FILE_NAME, MODE_PRIVATE)
+
+        // Check if "remember me" is true
+        // then autologin to profile and start "my profile" intent
+        if (sharedPreferences.getBoolean(KEY_REMEMBER_ME, false)) {
+            intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_left, R.anim.default_position)
+        }
 
         // Email and password validation
         emailErrorChanges()
@@ -46,8 +45,8 @@ class AuthActivity : AppCompatActivity() {
                 // init and start profile activity with anim
                 intent = Intent(this, ProfileActivity::class.java)
                 intent.putExtra(KEY_USERS_EMAIL, binding.emailEditText.text.toString())
-                startActivity(intent,
-                    ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+                startActivity(intent)
+                overridePendingTransition(R.anim.slide_left, R.anim.default_position)
             }
         }
     }
@@ -60,7 +59,7 @@ class AuthActivity : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.putString(KEY_EMAIL, binding.emailEditText.text.toString())
         editor.putString(KEY_PASSWORD, binding.passwordEditText.text.toString())
-        editor.putBoolean(KEY_REMEMBERME, true)
+        editor.putBoolean(KEY_REMEMBER_ME, true)
         editor.apply()
     }
 
@@ -130,7 +129,7 @@ class AuthActivity : AppCompatActivity() {
     companion object {
         private const val KEY_EMAIL = "email"
         private const val KEY_PASSWORD = "password"
-        private const val KEY_REMEMBERME = "rememberMe"
+        private const val KEY_REMEMBER_ME = "rememberMe"
         private const val SHARED_PREFERENCES_FILE_NAME = "autoLogin"
         private const val REGEX_UPPER_CASE = "[A-Z]"
         private const val REGEX_DIGITS = "[0-9]"

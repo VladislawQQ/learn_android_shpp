@@ -195,24 +195,17 @@
         tools:ignore="MissingConstraints" />
 
 
-    <com.google.android.material.button.MaterialButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         android:textAppearance="@style/open_sans_font"
-        android:gravity="center"
         android:text="@string/register"
         android:textAllCaps="true"
         android:textColor="@color/main_text_color"
-        android:textSize="@dimen/auth_button_text_size_landscape"
-
-        app:cornerRadius="@dimen/button_corner_radius"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-
-        app:strokeColor="@color/orange"
-        app:strokeWidth="@dimen/button_stroke_width"
+        android:textSize="@dimen/auth_button_text_size"
+        android:background="@drawable/register_button_border"
         tools:ignore="MissingConstraints" />
 
     <TextView
